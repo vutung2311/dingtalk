@@ -1,15 +1,15 @@
 const views = [
   {
     key: 'errorWin',
-    title: '网络错误'
+    title: 'Network Error'
   },
   {
     key: 'settingWin',
-    title: '设置'
+    title: 'Setting'
   },
   {
     key: 'aboutWin',
-    title: '关于'
+    title: 'About'
   }
 ]
 

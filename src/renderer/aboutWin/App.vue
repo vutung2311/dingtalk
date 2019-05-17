@@ -2,20 +2,20 @@
 .app
   .app-logo
     img.app-logo-image(src="./logo.png")
-    .app-logo-title 钉钉 {{ version }}
+    .app-logo-title Version {{ version }}
 
   .app-update
-    button.app-update-button(@click="checkForUpdates") 检查更新
+    button.app-update-button(@click="checkForUpdates") Check for update
 
   .app-desc {{ description }}
   .app-info
-    .app-info-title 作者:
+    .app-info-title Author:
     .app-info-desc {{ author }}
   .app-info
-    .app-info-title 协议:
+    .app-info-title License:
     .app-info-desc {{ license }}
   .app-info
-    .app-info-title 主页:
+    .app-info-title Homepage:
     .app-info-desc(@click="openURL") {{ homepage }}
 </template>
 

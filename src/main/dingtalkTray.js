@@ -17,7 +17,7 @@ export default class DingtalkTray {
     // 生成托盘图标及其菜单项实例
     this.$tray = new Tray(this.noMessageTrayIcon)
     // 设置鼠标悬浮时的标题
-    this.$tray.setToolTip('钉钉')
+    this.$tray.setToolTip('DingTalk')
     this.initEvent()
     this.setMenu()
   }
@@ -36,26 +36,26 @@ export default class DingtalkTray {
   setMenu () {
     const menu = [
       {
-        label: '显示窗口',
+        label: 'DingTalk',
         click: () => this._dingtalk.showMainWin()
       },
       {
-        label: '设置',
+        label: 'Setting',
         click: () => this._dingtalk.showSettingWin()
       },
       {
-        label: '关于',
+        label: 'About',
         click: () => this._dingtalk.showAboutWin()
       },
       {
-        label: '退出',
+        label: 'Quit',
         click: () => this._dingtalk.quit()
       }
     ]
 
     if (this._dingtalk.setting.enableCapture) {
       menu.splice(1, 0, {
-        label: '屏幕截图',
+        label: 'Screenshot',
         click: () => this._dingtalk.shortcutCapture()
       })
     }

@@ -31,7 +31,7 @@ export default dingtalk => () => {
   }
   // 创建浏览器窗口
   const $win = new BrowserWindow({
-    title: '钉钉',
+    title: 'DingTalk',
     width: 960,
     height: 600,
     minWidth: 720,

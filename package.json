@@ -7,6 +7,7 @@
   "scripts": {
     "start": "electron .",
     "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --fix --ext .js,.vue src",
     "dev": "node build/webpack.dev.conf.js",
     "postinstall": "electron-builder install-app-deps",
     "dev:main": "webpack --config build/main/webpack.dev.conf.js",
@@ -81,7 +82,7 @@
   },
   "build": {
     "appId": "com.electron.dingtalk",
-    "productName": "钉钉",
+    "productName": "DingTalk",
     "artifactName": "dingtalk-${version}-${channel}-${arch}.${ext}",
     "copyright": "Copyright © year nashaofu",
     "asar": true,
@@ -94,62 +95,18 @@
       "resources/tray/*",
       "resources/logo.png"
     ],
-    "publish": {
-      "provider": "github",
-      "owner": "nashaofu",
-      "repo": "dingtalk"
-    },
-    "mac": {
-      "target": "dmg",
-      "icon": "./resources/icons/icon.icns",
-      "category": "public.app-category.instant-messaging"
-    },
-    "win": {
-      "icon": "./resources/icons/icon.ico",
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        }
-      ]
-    },
     "linux": {
       "target": [
         {
-          "target": "AppImage",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        },
-        {
           "target": "deb",
           "arch": [
-            "x64",
-            "ia32"
-          ]
-        },
-        {
-          "target": "rpm",
-          "arch": [
-            "x64",
-            "ia32"
+            "x64"
           ]
         }
       ],
       "executableName": "dingtalk",
       "icon": "./resources/icons",
       "category": "InstantMessaging;Network"
-    },
-    "nsis": {
-      "oneClick": false,
-      "perMachine": true,
-      "allowToChangeInstallationDirectory": true,
-      "displayLanguageSelector": true,
-      "language": 2052
     }
   },
   "license": "MIT",

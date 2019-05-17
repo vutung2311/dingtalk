@@ -3,7 +3,7 @@
   .app-item
     dt-switch(
       v-model="enableCapture"
-      title="截图"
+      title="Enable screenshot"
     )
     dt-keybinding(
       :disabled="!enableCapture"
@@ -12,20 +12,20 @@
   .app-item
     dt-switch(
       v-model="enableFlicker"
-      title="新消息闪烁"
+      title="Enable flicker"
     )
   .app-item
     dt-switch(
       v-model="autoupdate"
-      title="自动更新"
+      title="Auto update"
     )
   .app-item
     .app-item-button
-      dt-button(@click="reset") 还原设置
+      dt-button(@click="reset") Reset
       dt-button(
         type="primary"
         @click="save"
-      ) 保存设置
+      ) Save
 </template>
 
 <script>

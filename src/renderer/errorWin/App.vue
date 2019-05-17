@@ -6,10 +6,10 @@
     .app-lamp-3 R
     .app-lamp-4 O
     .app-lamp-5 R
-  .app-desc 网络错误
+  .app-desc Network Error
   .app-buttons
-    .app-buttons-retry(@click="retry") 重试
-    .app-buttons-close(@click="close") 关闭
+    .app-buttons-retry(@click="retry") Retry
+    .app-buttons-close(@click="close") Close
 </template>
 
 <script>

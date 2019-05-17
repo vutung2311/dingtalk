@@ -71,11 +71,11 @@ export default injector => {
     }
     updateList()
     const status = {
-      completed: '下载完成',
-      interrupted: '下载失败'
+      completed: 'completed',
+      interrupted: 'failed'
     }
     if (status[file.state]) {
-      ipcRenderer.send('notify', `${file.name}${status[file.state]}`)
+      ipcRenderer.send('notify', `Download ${file.name} ${status[file.state]}`)
     }
   })
 

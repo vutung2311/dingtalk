@@ -10,8 +10,8 @@ export default dingtalk => () => {
   autoUpdater.on('update-downloaded', info => {
     dialog.showMessageBox(dingtalk.$mainWin, {
       type: 'question',
-      title: '立即更新',
-      message: `新版本${info.version}已经下载完成，是否立即更新？`,
+      title: 'Update ready',
+      message: `Version ${info.version} is already downloaded. Update now?`,
       noLink: true,
       buttons: ['是', '否']
     }, index => {
@@ -29,10 +29,10 @@ export default dingtalk => () => {
         if (data.tag_name.slice(1) > app.getVersion()) {
           dialog.showMessageBox(dingtalk.$mainWin, {
             type: 'question',
-            title: '版本更新',
-            message: '已有新版本更新，是否立即前往下载最新安装包？',
+            title: 'Update available',
+            message: 'There is a new version update, do you want to go to download the latest installation package immediately?',
             noLink: true,
-            buttons: ['是', '否']
+            buttons: ['Yes', 'No']
           }, index => {
             if (index === 0) {
               shell.openExternal('https://github.com/nashaofu/dingtalk/releases/latest')

@@ -11,7 +11,7 @@ export default dingtalk => () => {
     return dingtalk.$settingWin
   }
   const $win = new BrowserWindow({
-    title: '设置',
+    title: 'Settings',
     width: 320,
     height: 330,
     useContentSize: true,

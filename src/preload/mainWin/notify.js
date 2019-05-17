@@ -2,7 +2,7 @@ import { ipcRenderer } from 'electron'
 
 let notify
 function msg (body) {
-  notify = new Notification('钉钉', {
+  notify = new Notification('DingTalk', {
     body: body,
     icon: 'https://g.alicdn.com/dingding/web/0.1.8/img/logo.png'
   })

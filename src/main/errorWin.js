@@ -10,7 +10,7 @@ export default dingtalk => () => {
   }
 
   const $win = new BrowserWindow({
-    title: '网络错误',
+    title: 'Network Error',
     width: 600,
     height: 320,
     useContentSize: true,

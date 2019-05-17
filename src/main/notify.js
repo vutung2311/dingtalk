@@ -11,7 +11,7 @@ export default class Notify extends Events {
   show (body) {
     this.close()
     this.$notify = new Notification({
-      title: '钉钉',
+      title: 'DingTalk',
       body,
       icon: logo
     })

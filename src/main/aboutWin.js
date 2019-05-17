@@ -11,7 +11,7 @@ export default dingtalk => () => {
     return dingtalk.$aboutWin
   }
   const $win = new BrowserWindow({
-    title: '关于',
+    title: 'About',
     width: 320,
     height: 400,
     useContentSize: true,

@@ -12,7 +12,7 @@ export default dingtalk => url => {
   }
   if (!url) return
   const $win = new BrowserWindow({
-    title: '钉邮',
+    title: 'DingMail',
     width: 980,
     height: 640,
     minWidth: 720,

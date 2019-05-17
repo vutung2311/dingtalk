@@ -5,19 +5,19 @@ export default ($win, params) => {
   const menuCmd = {
     copy: {
       id: 1,
-      label: '复制'
+      label: 'Copy'
     },
     cut: {
       id: 2,
-      label: '剪切'
+      label: 'Cut'
     },
     paste: {
       id: 3,
-      label: '粘贴'
+      label: 'Paste'
     },
     selectall: {
       id: 4,
-      label: '全选'
+      label: 'Select All'
     }
   }
 
